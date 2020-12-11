@@ -17,6 +17,7 @@ module.exports = {
     }
 
     const entry = sanitizeEntity(entity, { model: strapi.models.visitor });
+    console.log(ctx.request.body, 'melek');
 
     const emailUser = ctx.request.body.email || '';
     // send an email by using the email plugin

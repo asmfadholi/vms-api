@@ -9,6 +9,7 @@ env_variables:
   DATABASE_USERNAME: 'postgres'
   DATABASE_PASSWORD: 'EavNNHM01lhaHGCb'
   INSTANCE_CONNECTION_NAME: 'vms-demo-project:us-central1:vms-database'
+  SENDGRID_API_KEY: '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'
 
 beta_settings:
   cloud_sql_instances: 'vms-demo-project:us-central1:vms-database'
