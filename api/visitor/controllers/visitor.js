@@ -16,7 +16,7 @@ module.exports = {
       entity = await strapi.services.visitor.create(ctx.request.body);
     }
 
-    entry = sanitizeEntity(entity, { model: strapi.models.visitor });
+    const entry = sanitizeEntity(entity, { model: strapi.models.visitor });
 
     const emailUser = ctx.request.body.email || '';
     // send an email by using the email plugin
