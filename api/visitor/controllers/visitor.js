@@ -17,13 +17,12 @@ module.exports = {
     }
 
     const entry = sanitizeEntity(entity, { model: strapi.models.visitor });
-    console.log(ctx.request.body, 'melek');
 
     const emailUser = ctx.request.body.email || '';
     // send an email by using the email plugin
     await strapi.plugins['email'].services.email.send({
       to: emailUser,
-      from: 'admin@strapi.io',
+      from: 'mochammad.fadholi.st@gmail.com',
       subject: 'Kirim email yes',
       text: `
         Berhasil kirim email yap...
