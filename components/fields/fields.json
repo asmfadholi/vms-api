@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_fields_fields",
+  "info": {
+    "name": "fields",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "shortText",
+        "longText",
+        "checkbox",
+        "radio"
+      ]
+    },
+    "label": {
+      "type": "string"
+    },
+    "isRequired": {
+      "type": "boolean"
+    }
+  }
+}
