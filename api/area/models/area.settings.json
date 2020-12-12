@@ -30,6 +30,15 @@
     },
     "location": {
       "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
+      "required": true,
+      "private": false
     }
   }
 }
