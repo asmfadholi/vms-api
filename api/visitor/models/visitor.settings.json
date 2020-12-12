@@ -15,7 +15,7 @@
       "type": "string"
     },
     "phoneNumber": {
-      "type": "integer"
+      "type": "biginteger"
     },
     "gender": {
       "type": "string"
