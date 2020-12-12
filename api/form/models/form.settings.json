@@ -17,10 +17,12 @@
     "otherFields": {
       "type": "dynamiczone",
       "components": [
-        "fields.fields"
+        "field-input.fields",
+        "field-select.list"
       ]
     },
     "area": {
+      "private": true,
       "model": "area"
     }
   }

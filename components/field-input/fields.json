@@ -2,7 +2,8 @@
   "collectionName": "components_fields_fields",
   "info": {
     "name": "fields",
-    "icon": "ad"
+    "icon": "ad",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -11,8 +12,7 @@
       "enum": [
         "shortText",
         "longText",
-        "checkbox",
-        "radio"
+        "number"
       ]
     },
     "label": {

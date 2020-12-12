@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_list_lists",
+  "info": {
+    "name": "list",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "checkbox",
+        "radio"
+      ]
+    },
+    "isRequired": {
+      "type": "boolean"
+    },
+    "label": {
+      "type": "string"
+    },
+    "options": {
+      "type": "json"
+    }
+  }
+}
