@@ -12,16 +12,20 @@
   },
   "attributes": {
     "name": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "phoneNumber": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "required": true
     },
     "gender": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "email": {
-      "type": "email"
+      "type": "email",
+      "required": true
     },
     "otherDatas": {
       "type": "json"
@@ -30,7 +34,8 @@
       "model": "area"
     },
     "isCheckin": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true
     },
     "isCheckout": {
       "type": "boolean"
