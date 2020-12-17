@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "forms",
+  "collectionName": "tickets",
   "info": {
-    "name": "form",
-    "description": ""
+    "name": "ticket"
   },
   "options": {
     "increments": true,
@@ -14,17 +13,21 @@
     "name": {
       "type": "string"
     },
-    "otherFields": {
-      "type": "dynamiczone",
-      "components": [
-        "field-input.fields",
-        "field-select.list"
+    "package": {
+      "model": "package"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "package",
+        "custom"
       ]
     },
-    "area": {
-      "unique": true,
-      "private": true,
-      "model": "area"
+    "custom": {
+      "type": "dynamiczone",
+      "components": [
+        "wahana.wahana"
+      ]
     }
   }
 }

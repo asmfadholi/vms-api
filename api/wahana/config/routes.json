@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/wahanas",
+      "handler": "wahana.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wahanas/count",
+      "handler": "wahana.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wahanas/:id",
+      "handler": "wahana.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/wahanas",
+      "handler": "wahana.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/wahanas/:id",
+      "handler": "wahana.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/wahanas/:id",
+      "handler": "wahana.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

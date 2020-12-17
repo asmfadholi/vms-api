@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wahana_visitors",
+  "info": {
+    "name": "wahanaVisitor",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "visitor": {
+      "model": "visitor"
+    },
+    "area": {
+      "model": "area"
+    },
+    "wahana": {
+      "model": "wahana"
+    },
+    "areaName": {
+      "type": "string"
+    },
+    "WahanaName": {
+      "type": "string"
+    }
+  }
+}

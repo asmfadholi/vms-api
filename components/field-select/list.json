@@ -1,8 +1,9 @@
 {
   "collectionName": "components_list_lists",
   "info": {
-    "name": "list",
-    "icon": "address-card"
+    "name": "fieldSelect",
+    "icon": "address-card",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,8 @@
       "type": "enumeration",
       "enum": [
         "checkbox",
-        "radio"
+        "radio",
+        "select"
       ]
     },
     "isRequired": {

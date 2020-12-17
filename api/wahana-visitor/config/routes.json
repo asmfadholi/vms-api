@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/wahana-visitors",
+      "handler": "wahana-visitor.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wahana-visitors/count",
+      "handler": "wahana-visitor.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/wahana-visitors/:id",
+      "handler": "wahana-visitor.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/wahana-visitors",
+      "handler": "wahana-visitor.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/wahana-visitors/:id",
+      "handler": "wahana-visitor.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/wahana-visitors/:id",
+      "handler": "wahana-visitor.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

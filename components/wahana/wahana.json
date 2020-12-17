@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_wahana_wahanas",
+  "info": {
+    "name": "wahanas",
+    "icon": "biking",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "wahanas": {
+      "collection": "wahana"
+    }
+  }
+}

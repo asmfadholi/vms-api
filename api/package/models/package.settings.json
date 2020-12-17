@@ -1,9 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "forms",
+  "collectionName": "packages",
   "info": {
-    "name": "form",
-    "description": ""
+    "name": "package"
   },
   "options": {
     "increments": true,
@@ -14,16 +13,10 @@
     "name": {
       "type": "string"
     },
-    "otherFields": {
-      "type": "dynamiczone",
-      "components": [
-        "field-input.fields",
-        "field-select.list"
-      ]
+    "price": {
+      "type": "biginteger"
     },
     "area": {
-      "unique": true,
-      "private": true,
       "model": "area"
     }
   }

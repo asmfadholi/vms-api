@@ -39,6 +39,13 @@
     },
     "isCheckout": {
       "type": "boolean"
+    },
+    "areaName": {
+      "type": "string"
+    },
+    "ticket": {
+      "unique": true,
+      "model": "ticket"
     }
   }
 }

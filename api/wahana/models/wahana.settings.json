@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "wahanas",
+  "info": {
+    "name": "wahana",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "area": {
+      "model": "area"
+    },
+    "maxQuota": {
+      "type": "biginteger"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "areaName": {
+      "type": "string"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "isCheckin": {
+      "type": "boolean"
+    },
+    "isCheckout": {
+      "type": "boolean"
+    }
+  }
+}
