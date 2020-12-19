@@ -242,7 +242,7 @@ const templateEmailView = ({name = '', email = '', productName = ''}) => `<!DOCT
       <td>
           <a style="width: 285px; height: auto; text-align:center; display: block; margin: 15px auto 30px; overflow: visible; border-radius: 8px; background: #ffffff;">
 
-              <img style="width: 100%; height: 100%; border-radius: 8px;" src="https://storage.googleapis.com/storage-vms-bucket/welcome_d8fc101656/welcome_d8fc101656.jpg" alt="Kupon Cashback hingga Rp50.000">
+              <img style="width: 100%; height: 100%; border-radius: 8px;" src="https://storage.googleapis.com/outing-vms-app.appspot.com/welcome_135ef5a24b/welcome_135ef5a24b.jpg" alt="welcome">
 
           </a>
       </td>
