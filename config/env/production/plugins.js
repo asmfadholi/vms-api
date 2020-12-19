@@ -2,7 +2,7 @@ module.exports = ({ env }) => ({
   upload: {
       provider: 'google-cloud-storage',
       providerOptions: {
-          bucketName: 'storage-vms-bucket',
+          bucketName: env('BUCKET_NAME'),
           publicFiles: false,
           uniform: false,
           basePath: '',
