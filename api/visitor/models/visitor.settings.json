@@ -46,6 +46,11 @@
     "ticket": {
       "unique": true,
       "model": "ticket"
+    },
+    "bookingCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
     }
   }
 }

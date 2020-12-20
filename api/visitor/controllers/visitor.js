@@ -13,6 +13,10 @@ module.exports = {
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services.visitor.create(data, { files });
     } else {
+      const { bookingCode = '' } = ctx.request.body
+      const { id = 0 } = await strapi.services.ticket.findOne({ slug: bookingCode })
+
+      ctx.request.body.ticket = { id }
       entity = await strapi.services.visitor.create(ctx.request.body);
     }
 
