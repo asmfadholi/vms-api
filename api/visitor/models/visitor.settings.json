@@ -40,17 +40,23 @@
     "isCheckout": {
       "type": "boolean"
     },
-    "areaName": {
-      "type": "string"
-    },
-    "ticket": {
-      "unique": true,
-      "model": "ticket"
-    },
     "bookingCode": {
       "type": "string",
       "required": true,
       "unique": true
+    },
+    "package": {
+      "model": "package"
+    },
+    "wahanas": {
+      "collection": "wahana"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "package",
+        "custom"
+      ]
     }
   }
 }

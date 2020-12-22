@@ -15,20 +15,20 @@ module.exports = {
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services.ticket.create(data, { files });
     } else {
-      const genSlug =  shortid.generate();
-      ctx.request.body.slug = genSlug;
+      const genBookingCode =  shortid.generate();
+      ctx.request.body.bookingCode = genBookingCode;
       entity = await strapi.services.ticket.create(ctx.request.body);
     }
 
     const entry = sanitizeEntity(entity, { model: strapi.models.ticket });
-    const { slug = '', email = '', area = {}, name = '' } = entry;
-    const url = `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${slug}`;
+    const { bookingCode = '', email = '', area = {}, name = '' } = entry;
+    const url = `https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=${bookingCode}`;
     // send an email by using the email plugin
     await strapi.plugins['email'].services.email.send({
       to: email,
       from: 'mochammad.fadholi.st@gmail.com',
       subject: `PEMBELIAN TIKET ${area.name || ''} TELAH BERHASIL`,
-      html: templateEmailTicket({ name, productName: area.name || '', email, url, code: slug })
+      html: templateEmailTicket({ name, productName: area.name || '', email, url, code: bookingCode })
     });
 
 

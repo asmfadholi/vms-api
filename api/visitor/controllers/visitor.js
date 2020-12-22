@@ -14,9 +14,17 @@ module.exports = {
       entity = await strapi.services.visitor.create(data, { files });
     } else {
       const { bookingCode = '' } = ctx.request.body
-      const { id = 0 } = await strapi.services.ticket.findOne({ slug: bookingCode })
 
-      ctx.request.body.ticket = { id }
+      // check is available bookingCode
+      const { id: idTicket = 0 } = await strapi.services.ticket.findOne({ bookingCode: bookingCode }) || {}
+      if (idTicket === 0) return ctx.send({ message: 'Booking code doesn\'t exist' }, 409);
+
+      // check is already register
+      const { id: idVisitor = 0 } = await strapi.services.visitor.findOne({ bookingCode: bookingCode }) || {}
+      if (idVisitor !== 0) return ctx.send({ message: 'User already registered' }, 409);
+
+      // checkin on
+      ctx.request.body.isCheckin = true
       entity = await strapi.services.visitor.create(ctx.request.body);
     }
 

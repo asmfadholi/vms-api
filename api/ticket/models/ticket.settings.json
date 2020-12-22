@@ -24,12 +24,6 @@
         "custom"
       ]
     },
-    "custom": {
-      "type": "dynamiczone",
-      "components": [
-        "wahana.wahana"
-      ]
-    },
     "email": {
       "type": "email",
       "required": true
@@ -37,9 +31,20 @@
     "area": {
       "model": "area"
     },
-    "slug": {
-      "type": "uid",
-      "targetField": "name"
+    "otherDatas": {
+      "type": "json"
+    },
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "bookingCode": {
+      "type": "uid"
+    },
+    "gender": {
+      "type": "string"
+    },
+    "wahanas": {
+      "collection": "wahana"
     }
   }
 }
