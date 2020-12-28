@@ -14,17 +14,20 @@
     "visitor": {
       "model": "visitor"
     },
-    "area": {
-      "model": "area"
-    },
     "wahana": {
       "model": "wahana"
     },
-    "areaName": {
+    "name": {
       "type": "string"
     },
-    "WahanaName": {
+    "gender": {
       "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "otherDatas": {
+      "type": "json"
     }
   }
 }
