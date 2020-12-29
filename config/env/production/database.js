@@ -5,8 +5,9 @@ module.exports = ({ env }) => ({
       connector: 'bookshelf',
       settings: {
         client: 'postgres',
-        host: `/cloudsql/${env('INSTANCE_CONNECTION_NAME')}`,
+        host: env('DATABASE_HOST'),
         database: env('DATABASE_NAME'),
+        port: env('DATABASE_PORT'),
         username: env('DATABASE_USERNAME'),
         password: env('DATABASE_PASSWORD'),
       },
