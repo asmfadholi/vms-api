@@ -16,6 +16,8 @@ app-*.yaml
 dispatch.yaml
 dispatch-*
 
+package-lock.json
+
 
 ############################
 # Linux
