@@ -242,7 +242,7 @@ const templateEmailView = ({ name = '', email = '', productName = '', url = '', 
       <td>
           <a style="width: 285px; height: auto; text-align:center; display: block; margin: 15px auto 30px; overflow: visible; border-radius: 8px; background: #ffffff;">
 
-              <img style="width: 100%; height: 100%; border-radius: 8px;" src="${url}" alt="QR code">
+              <img style="width: 100%; height: 100%; border-radius: 8px; object-fit: contain;" src="${url}" alt="QR code">
 
           </a>
       </td>
