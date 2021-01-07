@@ -10,8 +10,8 @@
     "strapi": "strapi",
     "deploy:staging": "gcloud app deploy app-staging.yaml --project staging-vms",
     "routing:staging": "gcloud app deploy dispatch-staging.yaml --project staging-vms",
-    "deploy:prod": "gcloud app deploy app-production.yaml --project outing-vms-app",
-    "routing:prod": "gcloud app deploy dispatch-production.yaml --project outing-vms-app",
+    "deploy:prod": "gcloud app deploy app-production.yaml --project outing-apps",
+    "routing:prod": "gcloud app deploy dispatch-production.yaml --project outing-apps",
     "gcp-build": "strapi build"
   },
   "devDependencies": {},
