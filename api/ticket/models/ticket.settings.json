@@ -45,6 +45,9 @@
     },
     "wahanas": {
       "collection": "wahana"
+    },
+    "ticketDate": {
+      "type": "date"
     }
   }
 }
