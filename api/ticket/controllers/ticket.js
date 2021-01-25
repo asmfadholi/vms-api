@@ -26,7 +26,7 @@ module.exports = {
     // send an email by using the email plugin
     await strapi.plugins['email'].services.email.send({
       to: email,
-      from: 'mochammad.fadholi.st@gmail.com',
+      from: 'no-reply@outing.id',
       subject: `PEMBELIAN TIKET ${area.name || ''} TELAH BERHASIL`,
       html: templateEmailTicket({ name, productName: area.name || '', email, url, code: bookingCode })
     });
