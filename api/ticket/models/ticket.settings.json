@@ -48,6 +48,9 @@
     },
     "ticketDate": {
       "type": "date"
+    },
+    "createdAtByBe": {
+      "type": "date"
     }
   }
 }

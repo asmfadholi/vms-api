@@ -1,6 +1,7 @@
 'use strict';
 const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 const templateEmailView = require('../../../template/htmlVisitor');
+const moment = require('moment');
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
  * to customize this controller
@@ -25,6 +26,8 @@ module.exports = {
 
       // checkin on
       ctx.request.body.isCheckin = true
+      const datetime = new Date();
+      ctx.request.body.createdAtByBe = moment(datetime).format('YYYY-MM-DD HH:mm:ss');
       entity = await strapi.services.visitor.create(ctx.request.body);
     }
 

@@ -57,6 +57,9 @@
         "package",
         "custom"
       ]
+    },
+    "createdAtByBe": {
+      "type": "date"
     }
   }
 }

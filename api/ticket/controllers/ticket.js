@@ -2,6 +2,7 @@
 const { parseMultipartData, sanitizeEntity } = require('strapi-utils');
 const templateEmailTicket = require('../../../template/htmlTicket');
 const shortid = require('shortid');
+const moment = require('moment');
 
 /**
  * Read the documentation (https://strapi.io/documentation/v3.x/concepts/controllers.html#core-controllers)
@@ -15,8 +16,10 @@ module.exports = {
       const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services.ticket.create(data, { files });
     } else {
-      const genBookingCode =  shortid.generate();
+      const genBookingCode = shortid.generate();
       ctx.request.body.bookingCode = genBookingCode;
+      const datetime = new Date();
+      ctx.request.body.createdAtByBe = moment(datetime).format('YYYY-MM-DD HH:mm:ss');
       entity = await strapi.services.ticket.create(ctx.request.body);
     }
 
