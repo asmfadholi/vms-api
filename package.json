@@ -5,12 +5,12 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "strapi start",
+    "start": " NODE_ENV=production strapi start",
     "build": "strapi build",
     "strapi": "strapi",
     "deploy:staging": "gcloud app deploy app-staging.yaml --project staging-vms",
     "routing:staging": "gcloud app deploy dispatch-staging.yaml --project staging-vms",
-    "deploy:prod": "gcloud app deploy app-production.yaml --project outing-apps",
+    "deploy:prod": "gcloud app deploy app.yaml --project outing-apps",
     "routing:prod": "gcloud app deploy dispatch-production.yaml --project outing-apps",
     "gcp-build": "NODE_ENV=production strapi build"
   },
@@ -20,7 +20,6 @@
     "moment": "^2.29.1",
     "pg": "^8.5.1",
     "shortid": "^2.2.16",
-    "sqlite3": "latest",
     "strapi": "3.3.4",
     "strapi-admin": "3.3.4",
     "strapi-connector-bookshelf": "3.3.4",
@@ -30,7 +29,7 @@
     "strapi-plugin-upload": "3.3.4",
     "strapi-plugin-users-permissions": "3.3.4",
     "strapi-provider-email-sendgrid": "3.3.4",
-    "strapi-provider-upload-google-cloud-storage": "3.1.6",
+    "strapi-provider-upload-google-cloud-storage": "^3.1.6",
     "strapi-utils": "3.3.4"
   },
   "author": {

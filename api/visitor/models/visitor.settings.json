@@ -59,7 +59,7 @@
       ]
     },
     "createdAtByBe": {
-      "type": "date"
+      "type": "string"
     }
   }
 }

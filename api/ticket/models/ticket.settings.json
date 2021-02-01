@@ -50,7 +50,7 @@
       "type": "date"
     },
     "createdAtByBe": {
-      "type": "date"
+      "type": "string"
     }
   }
 }
