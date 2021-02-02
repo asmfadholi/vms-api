@@ -39,7 +39,7 @@ module.exports = {
     // send an email by using the email plugin
     await strapi.plugins['email'].services.email.send({
       to: emailUser,
-      from: 'mochammad.fadholi.st@gmail.com',
+      from: 'no-reply@outing.id',
       subject: `SELAMAT kamu berhasil terdaftar di area ${area.name || 'ini'}`,
       html: templateEmailView({ name, productName: area.name || '', email })
     });
