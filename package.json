@@ -12,7 +12,6 @@
     "routing:staging": "gcloud app deploy dispatch-staging.yaml --project staging-vms",
     "deploy:prod": "gcloud app deploy app.yaml --project outing-apps",
     "routing:prod": "gcloud app deploy dispatch-production.yaml --project outing-apps",
-    "gcp-build": "NODE_ENV=production strapi build"
   },
   "devDependencies": {},
   "dependencies": {
@@ -28,8 +27,6 @@
     "strapi-plugin-email": "3.3.4",
     "strapi-plugin-upload": "3.3.4",
     "strapi-plugin-users-permissions": "3.3.4",
-    "strapi-provider-email-mandrill": "^1.0.0",
-    "strapi-provider-email-sendgrid": "3.3.4",
     "strapi-provider-email-smtp": "^1.0.1",
     "strapi-provider-upload-google-cloud-storage": "^3.1.6",
     "strapi-utils": "3.3.4"
