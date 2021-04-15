@@ -8,27 +8,23 @@ module.exports = ({ env }) => ({
           basePath: '',
       },
   },
-  // email: {
-  //   provider: 'sendgrid',
-  //   providerOptions: {
-  //     apiKey: env('SENDGRID_API_KEY'),
-  //   },
-  //   settings: {
-  //     defaultFrom: 'no-reply@outing.id',
-  //     defaultReplyTo: 'no-reply@outing.id',
-  //   },
-  // },
+
   email: {
-    provider: 'mandrill',
+    provider: 'smtp',
     providerOptions: {
-      mandrill_api_key: env('MANDRILL_API_KEY'),
-      mandrill_default_replyto: 'no-reply@outing.id',
-      mandrill_default_from_email: 'no-reply@outing.id',
+      host: env('SMTP_HOST'), //SMTP Host
+      port: env('SMTP_PORT')   , //SMTP Port
+      // secure: true,
+      username: env('SMTP_USERNAME'),
+      password: env('SMTP_PASSWORD'),
+      // rejectUnauthorized: true,
+      requireTLS: true,
+      connectionTimeout: 1,
     },
-    // settings: {
-    //   defaultFrom: 'no-reply@outing.id',
-    //   defaultReplyTo: 'no-reply@outing.id',
-    // },
+    settings: {
+      from: env('EMAIL_FROM'),
+      replyTo: env('EMAIL_REPLY_TO'),
+    },
   },
 
 });
