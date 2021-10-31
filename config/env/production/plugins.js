@@ -1,13 +1,13 @@
 module.exports = ({ env }) => ({
-  upload: {
-      provider: 'google-cloud-storage',
-      providerOptions: {
-          bucketName: env('BUCKET_NAME'),
-          publicFiles: false,
-          uniform: false,
-          basePath: '',
-      },
-  },
+  // upload: {
+  //     provider: 'google-cloud-storage',
+  //     providerOptions: {
+  //         bucketName: env('BUCKET_NAME'),
+  //         publicFiles: false,
+  //         uniform: false,
+  //         basePath: '',
+  //     },
+  // },
 
   email: {
     provider: 'smtp',
