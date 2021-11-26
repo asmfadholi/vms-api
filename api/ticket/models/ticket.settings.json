@@ -34,9 +34,6 @@
     "otherDatas": {
       "type": "json"
     },
-    "phoneNumber": {
-      "type": "biginteger"
-    },
     "bookingCode": {
       "type": "uid"
     },
@@ -50,6 +47,9 @@
       "type": "date"
     },
     "createdAtByBe": {
+      "type": "string"
+    },
+    "phoneNumber": {
       "type": "string"
     }
   }
