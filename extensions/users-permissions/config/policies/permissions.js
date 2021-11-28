@@ -13,9 +13,10 @@ module.exports = async (ctx, next) => {
   const host = (ctx.request.header.host || ctx.request.header.origin || '').replace('http://', '').replace('https://', '')
   console.log(host, ctx.request.header)
   const whitelist = await strapi.query('whitelist').findOne({ domain: host });
-  if (!whitelist) {
-    return handleErrors(ctx, undefined, 'forbidden');
-  }
+  console.log(whitelist, 'whitelist')
+  // if (!whitelist) {
+  //   return handleErrors(ctx, undefined, 'forbidden');
+  // }
 
   if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
     try {
