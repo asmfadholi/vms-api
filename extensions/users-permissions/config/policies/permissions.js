@@ -10,13 +10,13 @@ module.exports = async (ctx, next) => {
     return next();
   }
 
-  const host = (ctx.request.header.host || ctx.request.header.origin || '').replace('http://', '').replace('https://', '')
-  console.log(host, ctx.request.header)
+  const host = (ctx.request.header.origin || '').replace('http://', '').replace('https://', '')
+  
   const whitelist = await strapi.query('whitelist').findOne({ domain: host });
-  console.log(whitelist, 'whitelist')
-  // if (!whitelist) {
-  //   return handleErrors(ctx, undefined, 'forbidden');
-  // }
+  
+  if (!whitelist) {
+    return handleErrors(ctx, undefined, 'forbidden');
+  }
 
   if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
     try {
