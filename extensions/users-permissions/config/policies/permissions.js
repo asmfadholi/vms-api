@@ -10,9 +10,10 @@ module.exports = async (ctx, next) => {
     return next();
   }
 
-  const host = (ctx.request.header.origin || '').replace('http://', '').replace('https://', '')
+  const domain = (ctx.request.header.referer || '').replace('http://', '').replace('https://', '')
+  const splitHost = domain.split('/');
   console.log(ctx.request.header);
-  const whitelist = await strapi.query('whitelist').findOne({ domain: host });
+  const whitelist = await strapi.query('whitelist').findOne({ domain: splitHost[0] });
   
   if (!whitelist) {
     return handleErrors(ctx, undefined, 'forbidden');
