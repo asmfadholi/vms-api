@@ -1,0 +1,17 @@
+{
+  "kind": "collectionType",
+  "collectionName": "whitelists",
+  "info": {
+    "name": "whitelist"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "domain": {
+      "type": "string"
+    }
+  }
+}
