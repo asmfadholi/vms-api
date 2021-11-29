@@ -15,9 +15,9 @@ module.exports = async (ctx, next) => {
   console.log(ctx.request.header);
   const whitelist = await strapi.query('whitelist').findOne({ domain: splitHost[0] });
   
-  // if (!whitelist) {
-  //   return handleErrors(ctx, undefined, 'forbidden');
-  // }
+  if (!whitelist) {
+    return handleErrors(ctx, undefined, 'forbidden');
+  }
 
   if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
     try {
